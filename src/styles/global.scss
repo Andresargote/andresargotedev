@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Variables disponible para todo el proyecto*/
+:root {
+  --white: #FFF;
+
+  --green: #B4EFA5;
+  --blue: #A4E8FB;
+  --purple: #8553B8;
+  --black: #1B1B1B;
+
+  --linear: linear-gradient(90deg, rgba(180,239,165,1) 0%, rgba(164,232,251,1) 84%);
+
+}
+
+@media (max-width: 1000px){
+
+  html {
+      font-size: 93.75%;//15px
+  }
+
+}
+
+@media (max-width: 720px){
+
+  html {
+      font-size: 87.5%;//14px
+  }
+
+}
+
+body, input, textarea, button {
+  font: 500 1rem Inter, sans-serif;
+  color: var(--gray-500);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: Lexend, sans-serif;
+  color: --var(--gray-800);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}
