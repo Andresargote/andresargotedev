@@ -66,7 +66,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = data.map(article => {
         return {
             params: {
-                id: article.id
+                slug: article.slug
             }
         }
     });
@@ -79,9 +79,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-    const {id} = ctx.params;
+    const {slug} = ctx.params;
 
-    const {data} = await api.get(`/articles/${id}`);
+    const {data} = await api.get(`/articles/${slug}`);
 
     const article = {
         id: data._id,

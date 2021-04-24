@@ -2,6 +2,9 @@ import {GetStaticProps} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import api from '../services/api';
+import unified from 'unified';
+import parse from 'remark-parse';
+import remark2react from 'remark-react';
 
 import useReduceContent from '../hooks/useReduceContent';
 
@@ -9,6 +12,7 @@ import styles from '../styles/home.module.scss';
 
 type Article = {
   id: string;
+  slug: string;
   autor: string;
   title: string;
   description: string;
@@ -21,16 +25,14 @@ type HomeProps = {
 
 export default function Home({articles}: HomeProps) {
 
-  console.log(articles);
-
   return (
     <main className={styles.homeContainer}>
 
       {
         articles.map(article => {
           return (
-            <Link href={`/articles/${article.id}`}>
-              <a key={article.id}>
+            <Link href={`/articles/${article.slug}`} key={article.id}>
+              <a>
                 <picture>
                   <Image 
                     src={article.imgURL}
@@ -44,7 +46,12 @@ export default function Home({articles}: HomeProps) {
                 <div>
                   <h2>{article.title}</h2>
 
-                  <p>{article.description}</p>
+                  {
+                    unified()
+                        .use(parse)
+                        .use(remark2react)
+                        .processSync(article.description).result
+                  }
 
                   <span>por <strong>{article.autor}</strong></span>
                 </div>
@@ -67,6 +74,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const articles = data.map(article => {
     return {
       id: article._id,
+      slug: article.slug,
       autor: article.autor,
       title: article.title,
       imgURL: article.img[0].formats.large.url,
