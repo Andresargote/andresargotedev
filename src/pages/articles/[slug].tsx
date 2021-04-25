@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
+import Head from 'next/head';
 import unified from 'unified';
 import parse from 'remark-parse';
 import remark2react from 'remark-react';
@@ -27,35 +28,41 @@ type ArticleProps = {
 
 export default function Articles({article}: ArticleProps) {
     return (
-        <article className={styles.article}>
-            <h1>{article.title}</h1>
+        <>
+            <Head>
+                <title>{article.title} | Al blanco</title>
+            </Head>
 
-            <div className={styles.entryAutorAndSocial}>
-                <div className={styles.autorAndDate}>
-                    <span>por <strong>{article.autor}</strong></span>
-                    <time dateTime={article.date}>{article.dateArticle}</time>
+            <article className={styles.article}>
+                <h1>{article.title}</h1>
+
+                <div className={styles.entryAutorAndSocial}>
+                    <div className={styles.autorAndDate}>
+                        <span>por <strong>{article.autor}</strong></span>
+                        <time dateTime={article.date}>{article.dateArticle}</time>
+                    </div>
                 </div>
-            </div>
 
-            <picture>
-                <Image 
-                    src={article.imgURL}
-                    alt={article.title}
-                    width={800}
-                    height={600}
-                    objectFit='cover'
-                />
-            </picture>
+                <picture>
+                    <Image 
+                        src={article.imgURL}
+                        alt={article.title}
+                        width={800}
+                        height={600}
+                        objectFit='cover'
+                    />
+                </picture>
 
-            <div className={styles.content}>
-                {
-                    unified()
-                        .use(parse)
-                        .use(remark2react)
-                        .processSync(article.content).result
-                }
-            </div>
-        </article>
+                <div className={styles.content}>
+                    {
+                        unified()
+                            .use(parse)
+                            .use(remark2react)
+                            .processSync(article.content).result
+                    }
+                </div>
+            </article>
+        </> 
     )
 }
 

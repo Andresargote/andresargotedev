@@ -1,5 +1,6 @@
 import {GetStaticProps} from 'next';
 import Image from 'next/image';
+import Head from 'next/head';
 import Link from 'next/link';
 import api from '../services/api';
 import unified from 'unified';
@@ -27,6 +28,10 @@ export default function Home({articles}: HomeProps) {
 
   return (
     <main className={styles.homeContainer}>
+
+      <Head>
+        <title>Blog | Al blanco</title>
+      </Head>
 
       {
         articles.map(article => {
