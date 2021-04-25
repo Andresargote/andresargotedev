@@ -94,7 +94,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         id: data._id,
         autor: data.autor,
         title: data.title,
-        imgURL:data.img[0].formats.large.url,
+        imgURL:data.img[0].formats.medium.url,
         content: data.content,
         date: data.date,
         dateArticle: useFormatDate(data.date)

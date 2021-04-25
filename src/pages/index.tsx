@@ -100,7 +100,7 @@ export const getStaticProps: GetStaticProps = async () => {
       slug: article.slug,
       autor: article.autor,
       title: article.title,
-      imgURL: article.img[0].formats.large.url,
+      imgURL: article.img[0].formats.medium.url,
       description: useReduceContent(article.content)
     }
   }).reverse();//con el reverse logramos q el ultimo seal el primero
