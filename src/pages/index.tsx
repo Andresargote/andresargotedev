@@ -30,7 +30,25 @@ export default function Home({articles}: HomeProps) {
     <main className={styles.homeContainer}>
 
       <Head>
-        <title>Blog | Al blanco</title>
+        <title>Al blanco | Salud, Economía y Política</title>
+        <link rel="icon" href="/favicon.ico" />
+
+        <meta name="description" content="Mantenerse informados es un derechos y una necesidad, pero respetar su tiempo y otorgarle información pertinente, clara y resumida es, ahora, nuestro trabajo." />
+
+        {/*  <!-- Google / Search Engine Tags --> */}
+        <meta itemProp="name" content="Al blanco | Salud, Economía y Política" />
+        <meta itemProp="description" content="Mantenerse informados es un derechos y una necesidad, pero respetar su tiempo y otorgarle información pertinente, clara y resumida es, ahora, nuestro trabajo." />
+
+        {/*         <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://alblanco-next-fgzc91uwu-alblancogroup-gmailcom.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Al blanco | Salud, Economía y Política" />
+        <meta property="og:description" content="Mantenerse informados es un derechos y una necesidad, pero respetar su tiempo y otorgarle información pertinente, clara y resumida es, ahora, nuestro trabajo." />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Al blanco | Salud, Economía y Política" />
+        <meta name="twitter:description" content="Mantenerse informados es un derechos y una necesidad, pero respetar su tiempo y otorgarle información pertinente, clara y resumida es, ahora, nuestro trabajo." />
       </Head>
 
       {
