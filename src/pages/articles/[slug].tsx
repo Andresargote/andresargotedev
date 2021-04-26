@@ -8,8 +8,10 @@ import remark2react from 'remark-react';
 import api from '../../services/api';
 import useFormatDate from '../../hooks/useFormatDate';
 import useReduceContent from '../../hooks/useReduceContent';
+import useShare from '../../hooks/useShare';
 
 import styles from '../../styles/articles.module.scss';
+import React from 'react';
 
 
 type Article = {
@@ -29,6 +31,9 @@ type ArticleProps = {
 
 
 export default function Articles({article}: ArticleProps) {
+
+    const {shareDataProcess} = useShare();
+
     return (
         <>
             <Head>
@@ -63,6 +68,9 @@ export default function Articles({article}: ArticleProps) {
                     <div className={styles.autorAndDate}>
                         <span>por <strong>{article.autor}</strong></span>
                         <time dateTime={article.date}>{article.dateArticle}</time>
+                    </div>
+                    <div className={styles.socials}>
+                        <button onClick={() => shareDataProcess(article.title, article.description, 'url')}>Compartir</button>
                     </div>
                 </div>
 
