@@ -4,7 +4,7 @@ import Head from 'next/head';
 import unified from 'unified';
 import parse from 'remark-parse';
 import remark2react from 'remark-react';
-import {TwitterShareButton, TwitterIcon} from 'react-share';
+import {TwitterShareButton, WhatsappShareButton, TwitterIcon, WhatsappIcon} from 'react-share';
 
 import api from '../../services/api';
 import useFormatDate from '../../hooks/useFormatDate';
@@ -72,6 +72,10 @@ export default function Articles({article}: ArticleProps) {
                         <TwitterShareButton url={article.shareURL} title={article.title}>
                             <TwitterIcon size={32}/>
                         </TwitterShareButton>
+
+                        <WhatsappShareButton url={article.shareURL} title={article.title}>
+                            <WhatsappIcon size={32}/>
+                        </WhatsappShareButton>
                     </div>
                 </div>
 
