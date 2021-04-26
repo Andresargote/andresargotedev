@@ -4,11 +4,11 @@ import Head from 'next/head';
 import unified from 'unified';
 import parse from 'remark-parse';
 import remark2react from 'remark-react';
+import {TwitterShareButton, TwitterIcon} from 'react-share';
 
 import api from '../../services/api';
 import useFormatDate from '../../hooks/useFormatDate';
 import useReduceContent from '../../hooks/useReduceContent';
-import useShare from '../../hooks/useShare';
 
 import styles from '../../styles/articles.module.scss';
 import React from 'react';
@@ -16,6 +16,7 @@ import React from 'react';
 
 type Article = {
     id: string;
+    shareURL: string;
     autor: string;
     title: string;
     imgURL: string;
@@ -31,8 +32,6 @@ type ArticleProps = {
 
 
 export default function Articles({article}: ArticleProps) {
-
-    const {shareDataProcess} = useShare();
 
     return (
         <>
@@ -70,7 +69,9 @@ export default function Articles({article}: ArticleProps) {
                         <time dateTime={article.date}>{article.dateArticle}</time>
                     </div>
                     <div className={styles.socials}>
-                        <button onClick={() => shareDataProcess(article.title, article.description, 'url')}>Compartir</button>
+                        <TwitterShareButton url={article.shareURL} title={article.title}>
+                            <TwitterIcon size={32}/>
+                        </TwitterShareButton>
                     </div>
                 </div>
 
@@ -123,6 +124,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
     const article = {
         id: data._id,
+        shareURL: `http://localhost:3000/articles/${data.slug}`,
         autor: data.autor,
         title: data.title,
         imgURL:data.img[0].formats.medium.url,
