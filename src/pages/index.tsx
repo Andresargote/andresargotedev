@@ -33,24 +33,24 @@ export default function Home({articles}: HomeProps) {
         <title>Al blanco | Salud, Economía y Política</title>
         <link rel="icon" href="/favicon.ico" />
 
-        <meta name="description" content="Al Blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta name="description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
 
        {/*  <!-- Google / Search Engine Tags --> */}
         <meta itemProp="name" content="Al blanco | Salud, Economía y Política" />
-        <meta itemProp="description" content="Al Blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta itemProp="description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
         <meta itemProp="image" content="" />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://alblanco-next-cq08ewbt0-alblancogroup-gmailcom.vercel.app" />
+        <meta property="og:url" content="https://alblan.co" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Al blanco | Salud, Economía y Política" />
-        <meta property="og:description" content="Al Blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta property="og:description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
         <meta property="og:image" content="" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Al blanco | Salud, Economía y Política" />
-        <meta name="twitter:description" content="Al Blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta name="twitter:description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
         <meta name="twitter:image" content="" />
       </Head>
 

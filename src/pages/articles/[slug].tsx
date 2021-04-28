@@ -47,7 +47,7 @@ export default function Articles({article}: ArticleProps) {
                 <meta itemProp="image" content={article.imgURL} />
 
                 {/* <!-- Facebook Meta Tags --> */}
-                <meta property="og:url" content="https://alblanco-next-cq08ewbt0-alblancogroup-gmailcom.vercel.app" />
+                <meta property="og:url" content="https://alblan.co" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Al blanco | Salud, Economía y Política" />
                 <meta property="og:description" content={article.description} />
@@ -128,7 +128,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
     const article = {
         id: data._id,
-        shareURL: `http://localhost:3000/articles/${data.slug}`,
+        shareURL: `https://alblan.co/articles/${data.slug}`,
         autor: data.autor,
         title: data.title,
         imgURL:data.img[0].formats.medium.url,
