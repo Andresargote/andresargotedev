@@ -70,11 +70,11 @@ export default function Articles({article}: ArticleProps) {
                     </div>
                     <div className={styles.socials}>
                         <TwitterShareButton url={article.shareURL} title={article.title}>
-                            <TwitterIcon size={32}/>
+                            <TwitterIcon size={32} round={true} />
                         </TwitterShareButton>
 
                         <WhatsappShareButton url={article.shareURL} title={article.title}>
-                            <WhatsappIcon size={32}/>
+                            <WhatsappIcon size={32} round={true} />
                         </WhatsappShareButton>
                     </div>
                 </div>
