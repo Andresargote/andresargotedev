@@ -131,7 +131,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
         shareURL: `https://alblan.co/articles/${data.slug}`,
         autor: data.autor,
         title: data.title,
-        imgURL:data.img[0].formats.medium.url,
+        imgURL:data.img[0].formats.small.url,
         content: data.content,
         date: data.date,
         dateArticle: useFormatDate(data.date),
