@@ -41,7 +41,7 @@ export default function Home({articles}: HomeProps) {
         <meta itemProp="image" content="/imageAlblanco.jpg" />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://alblan.co" />
+        <meta property="og:url" content="https://andresargote.dev" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
         <meta property="og:description" content="Compartiendo mi proceso de aprendizaje en el mundo de la programación y las criptomonedas. Un lugar lleno de React, Node.js, MongoDB y mucho más.🚀" />
