@@ -128,7 +128,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
     const article = {
         id: data._id,
-        shareURL: `https://alblan.co/articles/${data.slug}`,
+        shareURL: `https://andresargote.dev/articles/${data.slug}`,
         autor: data.autor,
         title: data.title,
         imgURL:data.img[0].formats.small.url,
