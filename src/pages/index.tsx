@@ -30,27 +30,27 @@ export default function Home({articles}: HomeProps) {
     <main className={styles.homeContainer}>
 
       <Head>
-        <title>Al blanco | Salud, Economía y Política</title>
+        <title>andresargote | Compartiendo aprendizaje sobre programación y criptomonedas</title>
         <link rel="icon" href="/favicon.ico" />
 
-        <meta name="description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta name="description" content="Compartiendo mi proceso de aprendizaje en el mundo de la programación y las criptomonedas. Un lugar lleno de React, Node.js, MongoDB y mucho más.🚀" />
 
        {/*  <!-- Google / Search Engine Tags --> */}
-        <meta itemProp="name" content="Al blanco | Salud, Economía y Política" />
-        <meta itemProp="description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta itemProp="name" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
+        <meta itemProp="description" content="Compartiendo mi proceso de aprendizaje en el mundo de la programación y las criptomonedas. Un lugar lleno de React, Node.js, MongoDB y mucho más.🚀" />
         <meta itemProp="image" content="/imageAlblanco.jpg" />
 
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://alblan.co" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Al blanco | Salud, Economía y Política" />
-        <meta property="og:description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta property="og:title" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
+        <meta property="og:description" content="Compartiendo mi proceso de aprendizaje en el mundo de la programación y las criptomonedas. Un lugar lleno de React, Node.js, MongoDB y mucho más.🚀" />
         <meta property="og:image" content="/imageAlblanco.jpg" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Al blanco | Salud, Economía y Política" />
-        <meta name="twitter:description" content="Al blanco es un medio digital que apunta a la veracidad y precisión de sucesos e informaciones de gran interés colectivo. Ya no más tiempo perdido" />
+        <meta name="twitter:title" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
+        <meta name="twitter:description" content="Compartiendo mi proceso de aprendizaje en el mundo de la programación y las criptomonedas. Un lugar lleno de React, Node.js, MongoDB y mucho más.🚀" />
         <meta name="twitter:image" content="/imageAlblanco.jpg" />
       </Head>
 

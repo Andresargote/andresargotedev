@@ -36,26 +36,26 @@ export default function Articles({article}: ArticleProps) {
     return (
         <>
             <Head>
-                <title>{article.title} | Al blanco</title>
+                <title>{article.title} | andresargote</title>
                 <link rel="icon" href="/favicon.ico" />
 
                 <meta name="description" content={article.description} />
 
                 {/*  <!-- Google / Search Engine Tags --> */}
-                <meta itemProp="name" content="Al blanco | Salud, Economía y Política" />
+                <meta itemProp="name" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
                 <meta itemProp="description" content={article.description} />
                 <meta itemProp="image" content={article.imgURL} />
 
                 {/* <!-- Facebook Meta Tags --> */}
-                <meta property="og:url" content="https://alblan.co" />
+                <meta property="og:url" content="https://andresargote.dev" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Al blanco | Salud, Economía y Política" />
+                <meta property="og:title" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
                 <meta property="og:description" content={article.description} />
                 <meta property="og:image" content={article.imgURL} />
 
                 {/* <!-- Twitter Meta Tags --> */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Al blanco | Salud, Economía y Política" />
+                <meta name="twitter:title" content="andresargote | Compartiendo aprendizaje sobre programación y criptomonedas" />
                 <meta name="twitter:description" content={article.description} />
                 <meta name="twitter:image" content={article.imgURL} />
             </Head>
